@@ -1,0 +1,50 @@
+$color-limeGreen: hsl(163, 72%, 41%);
+$color-BrightRed: hsl(356, 69%, 56%);
+
+$color-facebook: hsl(208, 92%, 53%);
+$color-twitter: hsl(203, 89%, 53%);
+$gradient-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$color-youTube: hsl(348, 97%, 39%);
+
+// #### Dark Theme
+
+$gradient-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+
+// #### Light Theme
+
+$color-toggle: hsl(230, 22%, 74%);
+
+// #### Dark Theme
+
+$color-veryDarkBlue-BG: hsl(230, 17%, 14%);
+$color-veryDarkBlue-TopBGPattern: hsl(232, 19%, 15%);
+$color-darkDesaturatedBlue-CardBG: hsl(228, 28%, 20%);
+$color-desaturatedBlue-Text: hsl(228, 34%, 66%);
+$color-white-Text: hsl(0, 0%, 100%);
+
+// #### Light Theme
+
+$color-white-BG: hsl(0, 0%, 100%);
+$color-veryPaleBlue-TopBGPattern: hsl(225, 100%, 98%);
+$color-lightGrayishBlue-CardBG: hsl(227, 47%, 96%);
+$color-darkGrayishBlue-Text: hsl(228, 12%, 44%);
+$color-veryDarkBlue-Text: hsl(230, 17%, 14%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  // - Weights: 400, 700
+}
