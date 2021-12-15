@@ -1,1 +1,51 @@
 @use "./base" as *;
+@use "./mixins" as *;
+
+.theme {
+  &__title {
+    font-size: 8rem;
+  }
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 12rem;
+    height: 6rem;
+  }
+
+  &__span {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    transition: 0.3s;
+    border-radius: 4rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 5rem;
+      width: 5rem;
+      left: 0.5rem;
+      bottom: 0.5rem;
+      transition: 0.3s;
+      border-radius: 5rem;
+    }
+
+    &.switch__active {
+      &::before {
+        transform: translateX(6rem);
+      }
+    }
+  }
+
+  &__label input {
+    display: none;
+  }
+}
+
+.light__mode {
+  @include lightMode;
+}
+
+.dark__mode {
+  @include darkMode;
+}

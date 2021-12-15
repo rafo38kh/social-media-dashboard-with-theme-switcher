@@ -1,0 +1,38 @@
+@mixin lightMode {
+  background-color: hsl(0, 0%, 89%);
+
+  .theme {
+    &__title {
+      color: hsl(0, 0%, 0%);
+    }
+    &__span {
+      background-color: hsl(205, 88%, 10%);
+      box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 45px;
+    }
+    &__span:before {
+      background-color: hsl(0, 0%, 89%);
+    }
+  }
+}
+
+@mixin darkMode {
+  background-color: hsl(205, 88%, 10%);
+
+  .theme {
+    &__title {
+      color: hsl(0, 0%, 100%);
+    }
+
+    &__span {
+      background-color: hsl(0, 0%, 89%);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 45px;
+    }
+    input:checked + &__span {
+      background-color: rgb(124, 232, 220);
+    }
+
+    &__span:before {
+      background-color: hsl(205, 88%, 10%);
+    }
+  }
+}

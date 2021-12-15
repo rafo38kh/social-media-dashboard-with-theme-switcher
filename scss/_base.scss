@@ -47,4 +47,11 @@ body {
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
   // - Weights: 400, 700
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  transition: all 0.3s;
 }
