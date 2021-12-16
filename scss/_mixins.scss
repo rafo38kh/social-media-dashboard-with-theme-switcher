@@ -1,38 +1,165 @@
+@use "./base" as *;
+
 @mixin lightMode {
-  background-color: hsl(0, 0%, 89%);
+  background-color: $color-white-BG;
 
   .social {
-    &__title {
-      color: hsl(0, 0%, 0%);
+    &__functionality-box {
+      background-color: $color-veryPaleBlue-TopBGPattern;
     }
+    &__title-wrapper {
+      border-bottom: 0.05rem solid $color-veryDarkBlue-TopBGPattern;
+      @media (min-width: 810px) {
+        border-bottom: unset;
+      }
+    }
+
+    &__title {
+      color: $color-veryDarkBlue-Text;
+    }
+
+    &__subtitle {
+      color: $color-desaturatedBlue-Text;
+    }
+
+    &__mode {
+      color: $color-desaturatedBlue-Text;
+    }
+
     &__span {
-      background-color: hsl(205, 88%, 10%);
+      background-color: $color-toggle;
       box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 45px;
     }
     &__span:before {
-      background-color: hsl(0, 0%, 89%);
+      background-color: $color-veryPaleBlue-TopBGPattern;
+    }
+
+    &__card {
+      background-color: $color-lightGrayishBlue-CardBG;
+      &--daily {
+      }
+      &:hover {
+        background-color: $color-cardHoverLight;
+        cursor: pointer;
+      }
+    }
+
+    &__nickname {
+      color: $color-desaturatedBlue-Text;
+    }
+
+    &__quantity {
+      color: $color-veryDarkBlue-Text;
+      &--daily {
+        color: $color-veryDarkBlue-Text;
+      }
+    }
+
+    &__followers {
+      color: $color-desaturatedBlue-Text;
+    }
+
+    &__percent {
+      &--green {
+        color: $color-limeGreen;
+      }
+      &--red {
+        color: $color-brightRed;
+      }
+    }
+
+    &__views {
+      color: $color-desaturatedBlue-Text;
     }
   }
 }
 
 @mixin darkMode {
-  background-color: hsl(205, 88%, 10%);
+  background-color: $color-veryDarkBlue-BG;
 
   .social {
+    &__functionality-box {
+      background-color: $color-veryDarkBlue-TopBGPattern;
+    }
+
+    &__title-wrapper {
+      border-bottom: 0.05rem solid $color-veryPaleBlue-TopBGPattern;
+      @media (min-width: 810px) {
+        border-bottom: unset;
+      }
+    }
+
     &__title {
-      color: hsl(0, 0%, 100%);
+      color: $color-white-Text;
+    }
+
+    &__subtitle {
+      color: $color-darkGrayishBlue-Text;
+    }
+
+    &__mode {
+      color: $color-darkGrayishBlue-Text;
     }
 
     &__span {
-      background-color: hsl(0, 0%, 89%);
+      background: linear-gradient(
+        to top right,
+        hsl(210, 78%, 56%),
+        hsl(146, 68%, 55%)
+      );
       box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 45px;
     }
-    input:checked + &__span {
-      background-color: rgb(124, 232, 220);
-    }
+    // input:checked + &__span {
+    //   background-color: rgb(124, 232, 220);
+    // }
 
     &__span:before {
-      background-color: hsl(205, 88%, 10%);
+      background-color: $color-veryDarkBlue-BG;
+    }
+
+    &__card {
+      background-color: $color-darkDesaturatedBlue-CardBG;
+      &--daily {
+      }
+
+      &:hover {
+        background-color: $color-cardHoverDark;
+        cursor: pointer;
+      }
+    }
+
+    &__nickname {
+      color: $color-darkGrayishBlue-Text;
+    }
+
+    &__quantity {
+      color: $color-white-Text;
+      &--daily {
+        color: $color-white-Text;
+      }
+    }
+
+    &__followers {
+      color: $color-darkGrayishBlue-Text;
+    }
+
+    &__percent {
+      &--green {
+        color: $color-limeGreen;
+      }
+      &--red {
+        color: $color-brightRed;
+      }
+    }
+
+    &__views {
+      color: $color-darkGrayishBlue-Text;
     }
   }
+}
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

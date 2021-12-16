@@ -1,6 +1,6 @@
 const body = document.body;
 const box = document.querySelector(".js-checkbox");
-const title = document.querySelector(".social__title");
+// const mode = document.querySelector(".social__mode");
 const span = document.querySelector(".social__span");
 
 box.addEventListener("click", () => {
@@ -23,7 +23,6 @@ function checkPreference() {
   if (preference_query.matches && window.matchMedia) {
     body.classList.remove("light__mode");
     body.classList.add("dark__mode");
-
     span.classList.add("switch__active");
   } else {
     body.classList.remove("dark__mode");

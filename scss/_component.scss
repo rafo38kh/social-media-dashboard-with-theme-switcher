@@ -4,52 +4,76 @@
 .social {
   // header block
   &__functionality-box {
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    // padding: 4rem 0;
+    @media (min-width: 810px) {
+      padding-bottom: 4rem;
+    }
+    @media (min-width: 1140px) {
+      padding: 2rem 0 8rem 0;
+    }
   }
 
   &__title-wrapper {
+    padding: 2rem 0;
   }
 
   &__title {
-    font-size: 8rem;
+    font-size: clamp(2.4rem, 2vw, 3rem);
+
+    &--second {
+      margin: 4rem 0 2rem 0;
+    }
   }
 
   &__subtitle {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
   }
 
   &__toggle-wrapper {
+    @include spaceBetween;
+    padding: 2rem 0 4rem;
+    @media (min-width: 810px) {
+      padding: unset;
+      gap: 1rem;
+    }
   }
 
   &__mode {
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 
   &__label {
     position: relative;
     display: inline-block;
-    width: 12rem;
-    height: 6rem;
+    width: 5rem;
+    height: 2.5rem;
   }
 
   &__span {
     position: absolute;
     cursor: pointer;
     inset: 0;
-    transition: 0.3s;
+
     border-radius: 4rem;
 
     &::before {
       position: absolute;
       content: "";
-      height: 5rem;
-      width: 5rem;
-      left: 0.5rem;
-      bottom: 0.5rem;
-      transition: 0.3s;
+      height: 2rem;
+      width: 2rem;
+      left: 0.25rem;
+      bottom: 0.25rem;
+
       border-radius: 5rem;
     }
 
     &.switch__active {
       &::before {
-        transform: translateX(6rem);
+        transform: translateX(2.5rem);
       }
     }
   }
@@ -59,14 +83,73 @@
   }
 
   &__grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    &--first {
+      margin-top: -6rem;
+      @media (min-width: 1140px) {
+        margin-top: -12rem;
+      }
+    }
   }
 
   &__card {
+    position: relative;
+    text-align: center;
+    border-radius: 0.7rem;
+    // margin-bottom: 2rem;
+    padding: 2rem;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 0.4rem;
+      top: 0;
+      left: 0;
+    }
+
+    &--facebook {
+      &::before {
+        background-color: $color-facebook;
+      }
+    }
+    &--twitter {
+      &::before {
+        background-color: $color-twitter;
+      }
+    }
+    &--instagram {
+      &::before {
+        background: linear-gradient(
+          to top right,
+          hsl(37, 97%, 70%),
+          hsl(329, 70%, 58%)
+        );
+      }
+    }
+    &--youtube {
+      &::before {
+        background-color: $color-youTube;
+      }
+    }
+
     &--daily {
+      // margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 
   &__nick-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   &__icon {
@@ -75,27 +158,65 @@
   }
 
   &__nickname {
+    font-size: 1.3rem;
+    font-weight: 700;
   }
 
   &__quantity {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 2rem 0 0rem;
+
     &--daily {
+      font-size: 3rem;
+      margin: unset;
     }
   }
 
   &__followers {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1.4rem;
   }
 
   &__percent {
+    position: relative;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2rem 0 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: -1.5rem;
+      top: -0.2rem;
+    }
+
+    &--daily {
+      margin: unset;
+    }
+
     &--green {
+      &::before {
+        content: url(../images/icon-up.svg);
+      }
     }
     &--red {
+      &::before {
+        content: url(../images/icon-down.svg);
+      }
     }
   }
 
   &__views-wrapper {
+    position: relative;
+    @include spaceBetween;
   }
 
   &__views {
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 }
 

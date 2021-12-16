@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: all 0.3s;
 }
 
 html {
@@ -15,75 +16,311 @@ body {
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  transition: all 0.3s;
 }
 
+.social__container {
+  padding-bottom: 5rem;
+  width: 88%;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+@media (min-width: 810px) {
+  .social__container--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.social__functionality-box {
+  width: 100%;
+  border-radius: 0 0 2rem 2rem;
+}
+@media (min-width: 810px) {
+  .social__functionality-box {
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 1140px) {
+  .social__functionality-box {
+    padding: 2rem 0 8rem 0;
+  }
+}
+.social__title-wrapper {
+  padding: 2rem 0;
+}
 .social__title {
-  font-size: 8rem;
+  font-size: clamp(2.4rem, 2vw, 3rem);
+}
+.social__title--second {
+  margin: 4rem 0 2rem 0;
+}
+.social__subtitle {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+.social__toggle-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 4rem;
+}
+@media (min-width: 810px) {
+  .social__toggle-wrapper {
+    padding: unset;
+    gap: 1rem;
+  }
+}
+.social__mode {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 .social__label {
   position: relative;
   display: inline-block;
-  width: 12rem;
-  height: 6rem;
+  width: 5rem;
+  height: 2.5rem;
 }
 .social__span {
   position: absolute;
   cursor: pointer;
   inset: 0;
-  transition: 0.3s;
   border-radius: 4rem;
 }
 .social__span::before {
   position: absolute;
   content: "";
-  height: 5rem;
-  width: 5rem;
-  left: 0.5rem;
-  bottom: 0.5rem;
-  transition: 0.3s;
+  height: 2rem;
+  width: 2rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
   border-radius: 5rem;
 }
 .social__span.switch__active::before {
-  transform: translateX(6rem);
+  transform: translateX(2.5rem);
 }
 .social__label input {
   display: none;
 }
+.social__grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.social__grid-box--first {
+  margin-top: -6rem;
+}
+@media (min-width: 1140px) {
+  .social__grid-box--first {
+    margin-top: -12rem;
+  }
+}
+.social__card {
+  position: relative;
+  text-align: center;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  overflow: hidden;
+}
+.social__card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.4rem;
+  top: 0;
+  left: 0;
+}
+.social__card--facebook::before {
+  background-color: #198ff5;
+}
+.social__card--twitter::before {
+  background-color: #1ca0f2;
+}
+.social__card--instagram::before {
+  background: linear-gradient(to top right, #fdc468, #df4996);
+}
+.social__card--youtube::before {
+  background-color: #c4032a;
+}
+.social__card--daily {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.social__nick-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.social__nickname {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.social__quantity {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 2rem 0 0rem;
+}
+.social__quantity--daily {
+  font-size: 3rem;
+  margin: unset;
+}
+.social__followers {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.4rem;
+}
+.social__percent {
+  position: relative;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2rem 0 0;
+}
+.social__percent::before {
+  position: absolute;
+  content: "";
+  left: -1.5rem;
+  top: -0.2rem;
+}
+.social__percent--daily {
+  margin: unset;
+}
+.social__percent--green::before {
+  content: url(../images/icon-up.svg);
+}
+.social__percent--red::before {
+  content: url(../images/icon-down.svg);
+}
+.social__views-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social__views {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
 .light__mode {
-  background-color: #e3e3e3;
+  background-color: white;
+}
+.light__mode .social__functionality-box {
+  background-color: #f5f7ff;
+}
+.light__mode .social__title-wrapper {
+  border-bottom: 0.05rem solid #1f212e;
+}
+@media (min-width: 810px) {
+  .light__mode .social__title-wrapper {
+    border-bottom: unset;
+  }
 }
 .light__mode .social__title {
-  color: black;
+  color: #1e202a;
+}
+.light__mode .social__subtitle {
+  color: #8b97c6;
+}
+.light__mode .social__mode {
+  color: #8b97c6;
 }
 .light__mode .social__span {
-  background-color: #031d30;
+  background-color: #aeb3cb;
   box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 45px;
 }
 .light__mode .social__span:before {
-  background-color: #e3e3e3;
+  background-color: #f5f7ff;
+}
+.light__mode .social__card {
+  background-color: #f0f2fa;
+}
+.light__mode .social__card:hover {
+  background-color: #e0e2f0;
+  cursor: pointer;
+}
+.light__mode .social__nickname {
+  color: #8b97c6;
+}
+.light__mode .social__quantity {
+  color: #1e202a;
+}
+.light__mode .social__quantity--daily {
+  color: #1e202a;
+}
+.light__mode .social__followers {
+  color: #8b97c6;
+}
+.light__mode .social__percent--green {
+  color: #1db489;
+}
+.light__mode .social__percent--red {
+  color: #dc414c;
+}
+.light__mode .social__views {
+  color: #8b97c6;
 }
 
 .dark__mode {
-  background-color: #031d30;
+  background-color: #1e202a;
+}
+.dark__mode .social__functionality-box {
+  background-color: #1f212e;
+}
+.dark__mode .social__title-wrapper {
+  border-bottom: 0.05rem solid #f5f7ff;
+}
+@media (min-width: 810px) {
+  .dark__mode .social__title-wrapper {
+    border-bottom: unset;
+  }
 }
 .dark__mode .social__title {
   color: white;
 }
+.dark__mode .social__subtitle {
+  color: #63687e;
+}
+.dark__mode .social__mode {
+  color: #63687e;
+}
 .dark__mode .social__span {
-  background-color: #e3e3e3;
+  background: linear-gradient(to top right, #378fe6, #3eda82);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 45px;
 }
-input:checked + .dark__mode .social__span {
-  background-color: #7ce8dc;
-}
 .dark__mode .social__span:before {
-  background-color: #031d30;
+  background-color: #1e202a;
+}
+.dark__mode .social__card {
+  background-color: #252a41;
+}
+.dark__mode .social__card:hover {
+  background-color: #333a57;
+  cursor: pointer;
+}
+.dark__mode .social__nickname {
+  color: #63687e;
+}
+.dark__mode .social__quantity {
+  color: white;
+}
+.dark__mode .social__quantity--daily {
+  color: white;
+}
+.dark__mode .social__followers {
+  color: #63687e;
+}
+.dark__mode .social__percent--green {
+  color: #1db489;
+}
+.dark__mode .social__percent--red {
+  color: #dc414c;
+}
+.dark__mode .social__views {
+  color: #63687e;
 }
 
 /*# sourceMappingURL=style.css.map */

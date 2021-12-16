@@ -29,13 +29,15 @@ $color-veryPaleBlue-TopBGPattern: hsl(225, 100%, 98%);
 $color-lightGrayishBlue-CardBG: hsl(227, 47%, 96%);
 $color-darkGrayishBlue-Text: hsl(228, 12%, 44%);
 $color-veryDarkBlue-Text: hsl(230, 17%, 14%);
-
+$color-cardHoverDark: hsl(228, 26%, 27%);
+$color-cardHoverLight: hsl(232, 33%, 91%);
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: all 0.3s;
 }
 
 html {
@@ -48,10 +50,9 @@ body {
   font-family: "Inter", sans-serif;
   // - Weights: 400, 700
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  transition: all 0.3s;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // gap: 3rem;
 }

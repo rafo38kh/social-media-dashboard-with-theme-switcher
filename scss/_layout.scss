@@ -1,4 +1,14 @@
 .social__container {
+  padding-bottom: 5rem;
+  width: 88%;
+  max-width: 110rem;
+  margin: 0 auto;
+
   &--header {
+    @media (min-width: 810px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
