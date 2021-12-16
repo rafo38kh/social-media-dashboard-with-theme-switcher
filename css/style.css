@@ -23,23 +23,23 @@ body {
   transition: all 0.3s;
 }
 
-.theme__title {
+.social__title {
   font-size: 8rem;
 }
-.theme__label {
+.social__label {
   position: relative;
   display: inline-block;
   width: 12rem;
   height: 6rem;
 }
-.theme__span {
+.social__span {
   position: absolute;
   cursor: pointer;
   inset: 0;
   transition: 0.3s;
   border-radius: 4rem;
 }
-.theme__span::before {
+.social__span::before {
   position: absolute;
   content: "";
   height: 5rem;
@@ -49,41 +49,40 @@ body {
   transition: 0.3s;
   border-radius: 5rem;
 }
-.theme__span.switch__active::before {
+.social__span.switch__active::before {
   transform: translateX(6rem);
 }
-.theme__label input {
+.social__label input {
   display: none;
 }
-
 .light__mode {
   background-color: #e3e3e3;
 }
-.light__mode .theme__title {
+.light__mode .social__title {
   color: black;
 }
-.light__mode .theme__span {
+.light__mode .social__span {
   background-color: #031d30;
   box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 45px;
 }
-.light__mode .theme__span:before {
+.light__mode .social__span:before {
   background-color: #e3e3e3;
 }
 
 .dark__mode {
   background-color: #031d30;
 }
-.dark__mode .theme__title {
+.dark__mode .social__title {
   color: white;
 }
-.dark__mode .theme__span {
+.dark__mode .social__span {
   background-color: #e3e3e3;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 45px;
 }
-input:checked + .dark__mode .theme__span {
+input:checked + .dark__mode .social__span {
   background-color: #7ce8dc;
 }
-.dark__mode .theme__span:before {
+.dark__mode .social__span:before {
   background-color: #031d30;
 }
 

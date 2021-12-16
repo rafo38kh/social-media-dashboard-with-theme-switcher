@@ -1,10 +1,27 @@
 @use "./base" as *;
 @use "./mixins" as *;
 
-.theme {
+.social {
+  // header block
+  &__functionality-box {
+  }
+
+  &__title-wrapper {
+  }
+
   &__title {
     font-size: 8rem;
   }
+
+  &__subtitle {
+  }
+
+  &__toggle-wrapper {
+  }
+
+  &__mode {
+  }
+
   &__label {
     position: relative;
     display: inline-block;
@@ -39,6 +56,46 @@
 
   &__label input {
     display: none;
+  }
+
+  &__grid-box {
+  }
+
+  &__card {
+    &--daily {
+    }
+  }
+
+  &__nick-wrapper {
+  }
+
+  &__icon {
+    &--daily {
+    }
+  }
+
+  &__nickname {
+  }
+
+  &__quantity {
+    &--daily {
+    }
+  }
+
+  &__followers {
+  }
+
+  &__percent {
+    &--green {
+    }
+    &--red {
+    }
+  }
+
+  &__views-wrapper {
+  }
+
+  &__views {
   }
 }
 

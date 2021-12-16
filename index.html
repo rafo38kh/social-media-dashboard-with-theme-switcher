@@ -21,24 +21,30 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <!-- <main class="social social__container">
-      <div class="social__functionality-box">
+    <header class="social__functionality-box">
+      <div class="social__container social__container--header">
         <div class="social__title-wrapper">
           <h1 class="social__title">Social Media Dashboard</h1>
           <h2 class="social__subtitle">Total Followers: 23,004</h2>
         </div>
-
         <div class="social__toggle-wrapper">
           <p class="social__mode">Dark Mode</p>
-
-          <label class="social__label">
-            <input type="checkbox" />
+          <label for="toggle" class="social__label">
+            <input
+              aria-label="toggle switch"
+              type="checkbox"
+              id="toggle"
+              type="checkbox"
+              class="js-checkbox"
+            />
             <span class="social__span"></span>
           </label>
         </div>
       </div>
+    </header>
 
-      <div class="social__result-box">
+    <main class="social__container">
+      <div class="social__grid-box">
         <div class="social__card">
           <div class="social__nick-wrapper">
             <img
@@ -51,7 +57,7 @@
           </div>
           <p class="social__quantity">1987</p>
           <p class="social__followers">Followers</p>
-          <p class="social__daily-result">12 Today</p>
+          <p class="social__percent social__percent--green">12 Today</p>
         </div>
 
         <div class="social__card">
@@ -66,7 +72,7 @@
           </div>
           <p class="social__quantity">1044</p>
           <p class="social__followers">Followers</p>
-          <p class="social__daily-result">99 Today</p>
+          <p class="social__percent social__percent--green">99 Today</p>
         </div>
 
         <div class="social__card">
@@ -81,7 +87,7 @@
           </div>
           <p class="social__quantity">11k</p>
           <p class="social__followers">Followers</p>
-          <p class="social__daily-result">1099 Today</p>
+          <p class="social__percent social__percent--green">1099 Today</p>
         </div>
 
         <div class="social__card">
@@ -96,14 +102,14 @@
           </div>
           <p class="social__quantity">8239</p>
           <p class="social__followers">Subscribers</p>
-          <p class="social__daily-result">144 Today</p>
+          <p class="social__percent social__percent--red">144 Today</p>
         </div>
       </div>
 
       <h3 class="social__title">Overview - Today</h3>
 
       <div class="social__grid-box">
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Page Views</p>
             <img
@@ -115,11 +121,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">87</p>
-            <p class="social__percent">3%</p>
+            <p class="social__percent social__percent--green">3%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Likes</p>
             <img
@@ -131,11 +137,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">52</p>
-            <p class="social__percent">2%</p>
+            <p class="social__percent social__percent--red">2%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Likes</p>
             <img
@@ -147,11 +153,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">5462</p>
-            <p class="social__percent">2257%</p>
+            <p class="social__percent social__percent--green">2257%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Profile Views</p>
             <img
@@ -163,11 +169,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">52k</p>
-            <p class="social__percent">1375%</p>
+            <p class="social__percent social__percent--green">1375%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Retweets</p>
             <img
@@ -179,11 +185,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">117</p>
-            <p class="social__percent">303%</p>
+            <p class="social__percent social__percent--green">303%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Likes</p>
             <img
@@ -195,11 +201,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">507</p>
-            <p class="social__percent">553%</p>
+            <p class="social__percent social__percent--green">553%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Likes</p>
             <img
@@ -211,11 +217,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">107</p>
-            <p class="social__percent">19%</p>
+            <p class="social__percent social__percent--red">19%</p>
           </div>
         </div>
 
-        <div class="social__card social__card-daily">
+        <div class="social__card social__card--daily">
           <div class="social__views-wrapper">
             <p class="social__views">Total Views</p>
             <img
@@ -227,23 +233,11 @@
           </div>
           <div class="social__views-wrapper">
             <p class="social__quantity--daily">1407</p>
-            <p class="social__percent">12%</p>
+            <p class="social__percent social__percent--red">12%</p>
           </div>
         </div>
       </div>
-    </main> -->
-
-    <h1 class="theme__title"></h1>
-    <label for="toggle" class="theme__label">
-      <input
-        aria-label="toggle switch"
-        type="checkbox"
-        id="toggle"
-        type="checkbox"
-        class="js-checkbox"
-      />
-      <span class="theme__span"></span>
-    </label>
+    </main>
 
     <!--
     Social Media Dashboard Total Followers: 23,004 Dark Mode @nathanf 1987

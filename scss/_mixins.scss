@@ -1,7 +1,7 @@
 @mixin lightMode {
   background-color: hsl(0, 0%, 89%);
 
-  .theme {
+  .social {
     &__title {
       color: hsl(0, 0%, 0%);
     }
@@ -18,7 +18,7 @@
 @mixin darkMode {
   background-color: hsl(205, 88%, 10%);
 
-  .theme {
+  .social {
     &__title {
       color: hsl(0, 0%, 100%);
     }
