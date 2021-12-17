@@ -26,8 +26,8 @@ This is a solution to the [Social Media Dashboard with Theme Switcher Challenge 
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-with-css-grid-and-vanilla-js-7cVwTPXdf](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-with-css-grid-and-vanilla-js-7cVwTPXdf)
+- Live Site URL: [https://rafo38kh.github.io/social-media-dashboard-with-theme-switcher/](https://rafo38kh.github.io/social-media-dashboard-with-theme-switcher/)
 
 ## My process
 
