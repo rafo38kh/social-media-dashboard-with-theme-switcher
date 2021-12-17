@@ -37,6 +37,7 @@ This is a solution to the [Social Media Dashboard with Theme Switcher Challenge 
 - SCSS custom properties
 - CSS Flexbox
 - CSS Grid
+- vanilla JS
 - Mobile-first workflow
 
 ## Author

@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  transition: all 0.3s;
 }
 
 html {
@@ -50,7 +49,7 @@ body {
   padding: 2rem 0;
 }
 .social__title {
-  font-size: clamp(2.4rem, 2vw, 3rem);
+  font-size: clamp(2.4rem, 2vw, 2.7rem);
 }
 .social__title--second {
   margin: 4rem 0 2rem 0;
@@ -105,7 +104,7 @@ body {
 .social__grid-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
+  gap: 3rem;
 }
 .social__grid-box--first {
   margin-top: -6rem;
@@ -119,7 +118,7 @@ body {
   position: relative;
   text-align: center;
   border-radius: 0.7rem;
-  padding: 2rem;
+  padding: 2.5rem;
   overflow: hidden;
 }
 .social__card::before {
@@ -155,11 +154,11 @@ body {
   margin-top: 1rem;
 }
 .social__nickname {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 .social__quantity {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 700;
   margin: 2rem 0 0rem;
 }
@@ -170,23 +169,23 @@ body {
 .social__followers {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .social__percent {
   position: relative;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 2rem 0 0;
 }
 .social__percent::before {
   position: absolute;
   content: "";
-  left: -1.5rem;
+  left: -1.1rem;
   top: -0.2rem;
 }
 .social__percent--daily {
-  margin: unset;
+  margin: 1.5rem 0 0;
 }
 .social__percent--green::before {
   content: url(../images/icon-up.svg);
@@ -201,7 +200,24 @@ body {
   align-items: center;
 }
 .social__views {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.social__attribution {
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0 1rem 0;
+}
+.social__attribution-link:link, .social__attribution-link:visited {
+  text-transform: uppercase;
+  color: #1ca0f2;
+  text-decoration: none;
+  font-weight: 400;
+}
+.social__attribution-link:hover, .social__attribution-link:active {
+  color: #198ff5;
   font-weight: 700;
 }
 
@@ -223,10 +239,10 @@ body {
   color: #1e202a;
 }
 .light__mode .social__subtitle {
-  color: #8b97c6;
+  color: #63687e;
 }
 .light__mode .social__mode {
-  color: #8b97c6;
+  color: #63687e;
 }
 .light__mode .social__span {
   background-color: #aeb3cb;
@@ -243,7 +259,7 @@ body {
   cursor: pointer;
 }
 .light__mode .social__nickname {
-  color: #8b97c6;
+  color: #63687e;
 }
 .light__mode .social__quantity {
   color: #1e202a;
@@ -252,7 +268,7 @@ body {
   color: #1e202a;
 }
 .light__mode .social__followers {
-  color: #8b97c6;
+  color: #63687e;
 }
 .light__mode .social__percent--green {
   color: #1db489;
@@ -261,7 +277,10 @@ body {
   color: #dc414c;
 }
 .light__mode .social__views {
-  color: #8b97c6;
+  color: #63687e;
+}
+.light__mode .social .attribution {
+  color: #63687e;
 }
 
 .dark__mode {
@@ -282,10 +301,10 @@ body {
   color: white;
 }
 .dark__mode .social__subtitle {
-  color: #63687e;
+  color: #8b97c6;
 }
 .dark__mode .social__mode {
-  color: #63687e;
+  color: #8b97c6;
 }
 .dark__mode .social__span {
   background: linear-gradient(to top right, #378fe6, #3eda82);
@@ -302,7 +321,7 @@ body {
   cursor: pointer;
 }
 .dark__mode .social__nickname {
-  color: #63687e;
+  color: #8b97c6;
 }
 .dark__mode .social__quantity {
   color: white;
@@ -311,7 +330,7 @@ body {
   color: white;
 }
 .dark__mode .social__followers {
-  color: #63687e;
+  color: #8b97c6;
 }
 .dark__mode .social__percent--green {
   color: #1db489;
@@ -320,7 +339,10 @@ body {
   color: #dc414c;
 }
 .dark__mode .social__views {
-  color: #63687e;
+  color: #8b97c6;
+}
+.dark__mode .social__attribution {
+  color: #8b97c6;
 }
 
 /*# sourceMappingURL=style.css.map */

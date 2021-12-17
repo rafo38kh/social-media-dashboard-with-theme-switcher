@@ -2,11 +2,9 @@
 @use "./mixins" as *;
 
 .social {
-  // header block
   &__functionality-box {
     width: 100%;
     border-radius: 0 0 2rem 2rem;
-    // padding: 4rem 0;
     @media (min-width: 810px) {
       padding-bottom: 4rem;
     }
@@ -20,7 +18,7 @@
   }
 
   &__title {
-    font-size: clamp(2.4rem, 2vw, 3rem);
+    font-size: clamp(2.4rem, 2vw, 2.7rem);
 
     &--second {
       margin: 4rem 0 2rem 0;
@@ -57,7 +55,6 @@
     position: absolute;
     cursor: pointer;
     inset: 0;
-
     border-radius: 4rem;
 
     &::before {
@@ -67,7 +64,6 @@
       width: 2rem;
       left: 0.25rem;
       bottom: 0.25rem;
-
       border-radius: 5rem;
     }
 
@@ -85,7 +81,8 @@
   &__grid-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 2rem;
+    gap: 3rem;
+
     &--first {
       margin-top: -6rem;
       @media (min-width: 1140px) {
@@ -98,8 +95,7 @@
     position: relative;
     text-align: center;
     border-radius: 0.7rem;
-    // margin-bottom: 2rem;
-    padding: 2rem;
+    padding: 2.5rem;
     overflow: hidden;
 
     &::before {
@@ -137,7 +133,6 @@
     }
 
     &--daily {
-      // margin-bottom: 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -152,18 +147,18 @@
     margin-top: 1rem;
   }
 
-  &__icon {
-    &--daily {
-    }
-  }
+  // &__icon {
+  //   &--daily {
+  //   }
+  // }
 
   &__nickname {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
   }
 
   &__quantity {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 700;
     margin: 2rem 0 0rem;
 
@@ -176,25 +171,25 @@
   &__followers {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   &__percent {
     position: relative;
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin: 2rem 0 0;
 
     &::before {
       position: absolute;
       content: "";
-      left: -1.5rem;
+      left: -1.1rem;
       top: -0.2rem;
     }
 
     &--daily {
-      margin: unset;
+      margin: 1.5rem 0 0;
     }
 
     &--green {
@@ -215,8 +210,30 @@
   }
 
   &__views {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
+  }
+
+  &__attribution {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0 1rem 0;
+
+    &-link:link,
+    &-link:visited {
+      text-transform: uppercase;
+      color: $color-twitter;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    &-link:hover,
+    &-link:active {
+      color: $color-facebook;
+      font-weight: 700;
+    }
   }
 }
 

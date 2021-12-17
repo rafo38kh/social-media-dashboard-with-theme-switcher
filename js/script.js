@@ -1,6 +1,5 @@
 const body = document.body;
 const box = document.querySelector(".js-checkbox");
-// const mode = document.querySelector(".social__mode");
 const span = document.querySelector(".social__span");
 
 box.addEventListener("click", () => {
